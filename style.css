@@ -1,0 +1,392 @@
+body{
+  background-color: rgb(161, 171, 160);
+}
+.container{
+  position: absolute;
+  left: 40%;
+  width: 100%;
+  height: 100vh;
+  font-size: xx-large;
+}
+.container2{
+  position: relative;
+  left: 50%;
+}
+
+.container a{
+  font-size: xx-large;
+}
+.container2 a{
+  font-size: xx-large;
+}
+h1{
+  text-align: center;
+}
+.div3{
+  width: 100px;
+  height: 150px;
+  background: blue;
+  
+  display: inline-block;
+  animation: rotate 2s infinite;
+  border: 2px solid black;
+
+}
+@keyframes rotate{
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+  }
+}
+
+.div1{
+  width: 100px;
+  height: 150px;
+  background-color: green;
+  transform: skew(20deg);
+  display: inline-block;
+  animation-timing-function: ease-in-out ;
+  /* animation-direction: alternate; */
+  animation: skewx 2s infinite ;
+  border: 2px solid black;
+
+}
+@keyframes skewx {
+from{
+  transform: skewX(20 deg);
+}
+
+to{
+  transform: skewX(-20deg);
+}
+}
+
+.div2{
+  width: 100px;
+  height: 150px;
+  background-color:purple;
+  transform: skew(20deg);
+  display: inline-block;
+  animation-timing-function: ease-in-out ;
+  /* animation-direction: alternate; */
+  animation: skewy 2s infinite ;
+  border: 2px solid black;
+
+}
+
+@keyframes skewy {
+from{
+  transform: skewy(20deg);
+}
+
+to{
+  transform: skewy(-20deg);
+}
+}
+
+.div4{
+  width: 100px;
+  height: 150px;
+  background-color:purple;
+  animation: height 2s infinite;
+  display: inline-block;
+  border: 2px solid black;
+}
+@keyframes height{
+  0%{
+    transform: scaleY(.5);
+  }
+  50%{
+    transform: scaleY(1);
+  }
+  100%{
+    transform: scaleY(.5);
+  }
+}
+
+.div5{
+  width: 100px;
+  height: 150px;
+  background-color:green;
+  animation: width 2s infinite;
+  display: inline-block;
+  border: 2px solid black;
+
+}
+@keyframes width{
+  0%{
+    transform: scaleX(.5);
+  }
+  50%{
+    transform: scaleX(1);
+  }
+  100%{
+    transform: scaleX(.5);
+  }
+}
+
+/* page 2 css starts from here */
+.linear {
+  width: 100px;
+  height: 100px;
+  background:green;
+  transition: width 2s;
+  border: 2px solid black;
+  
+}
+
+.linear:hover {
+  width: 300px;
+}
+
+.widthheight {
+  width: 100px;
+  height: 100px;
+  background:green;
+  transition: width 2s, height 3s;
+  border: 2px solid black;
+
+}
+
+.widthheight:hover {
+  width: 300px;
+  height: 300px;
+}
+
+.delay{
+  width: 100px;
+  height: 100px;
+  background:green;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+  border: 2px solid black;
+
+}
+
+.delay:hover {
+  width: 300px;
+}
+
+.ease{
+  width: 100px;
+  height: 100px;
+  background:green;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease;
+  transition-delay: 1s;
+  border: 2px solid black;
+
+}
+
+.ease:hover {
+  width: 300px;
+}
+
+
+.ease-in{
+  width: 100px;
+  height: 100px;
+  background:green;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease-in;
+  transition-delay: 1s;
+  border: 2px solid black;
+
+}
+
+.ease-in:hover {
+  width: 300px;
+}
+
+
+.ease-out{
+  width: 100px;
+  height: 100px;
+  background:green;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-delay: 1s;
+  border: 2px solid black;
+
+}
+
+.ease-out:hover {
+  width: 300px;
+}
+
+.ease-in-out{
+  width: 100px;
+  height: 100px;
+  background:green;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
+  border: 2px solid black;
+
+}
+
+.ease-in-out:hover {
+  width: 300px;
+}
+/* page 3 ka CSS */
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.hero{
+  height: 100vh;
+  width: 100%;
+  background-image: url(./sky.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+
+
+}
+.highway{
+  height: 200px;
+  width: 500%;
+  display: block;
+  background-image: url(./road.jpg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-repeat: repeat-x;
+animation: highway 5s linear infinite;
+}
+@keyframes highway{
+  100%{
+    transform: translateX(-3400px);
+  }
+}
+.city{
+  height: 250px;
+  width: 500%;
+  background-image: url(./city.png);
+  position: absolute;
+  bottom: 200px;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 1;
+  background-repeat: repeat-x;
+  animation: city 20s linear infinite;
+}
+@keyframes city{
+  100%{
+    transform: translateX(-1400px);
+  }
+}
+
+.car{
+  width: 400px;
+  left: 50%;
+  bottom: 100px;
+  transform: translateX(-50px);
+  position: absolute;
+  z-index: 2;
+}
+.car img{
+  width: 100%;
+  animation: car 20s linear infinite;
+}
+  
+@keyframes car{
+  100%{
+    transform: translateY(-1px);
+  }
+  50%{
+    transform: translateY(1px);
+  }
+  0%{
+    transform: translateY(-1px);
+  }
+}
+
+.wheel{
+  left: 50%;
+  bottom: 178px;
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 2;
+}
+.wheel img{
+  animation: wheel 1s linear infinite;
+  width: 72px;
+  height: 72px;
+}
+.Back-wheel{
+  left: -15px;
+  position: absolute;
+}
+.Front-wheel{
+  left: 230px;
+  position: absolute;
+}
+.span1{
+  position: relative;
+  left: 30%;
+  font-size: 100px;
+  background-color: orange;
+  font-weight: bold;
+}
+.span2{
+  position: relative;
+  left: 30%;
+  font-size: 100px;
+  background-color: white;
+  font-weight: bold;
+}
+.span3{
+  position: relative;
+  left: 30%;
+  font-size: 100px;
+  background-color: green;
+  font-weight: bold;
+}
+.flag{
+  top: 430px;
+  left: 62%;
+  position: relative;
+  z-index: 2;
+}
+.flag img{
+width: 100px;
+height: 130px;
+}
+.sun{
+  left: 90%;
+  position: relative;
+  z-index: 1;
+}
+.sun img{
+  width: 100px;
+  height: 100px;
+  animation: sun 20s linear infinite;
+  background-repeat: repeat-x;
+}
+@keyframes sun{
+  100%{
+    transform: translateX(-400px);
+  }
+}
+@keyframes wheel{
+100%{
+transform: rotate(360deg);
+
+}
+
+
+}
